@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:name="com.uos.cokcok.MainApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Cokcok"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="s" >
+
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@mipmap/ic_launcher" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/md_theme_light_primary" />
+
+        <service
+            android:name="com.uos.cokcok.presentation.service.FirebaseService"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge" >
+
+            <meta-data
+                android:name="com.uos.cokcok.initializer.LoggerInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="com.uos.cokcok.initializer.KakaoSDKInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="com.uos.cokcok.initializer.NightModeInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="com.uos.cokcok.initializer.FirebaseCrashlyticsInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
+
+    </application>
+
+
+
+
+
+</manifest>

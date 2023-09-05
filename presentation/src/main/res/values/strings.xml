@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">콕콕</string>
+
+    <string name="nav_home">home</string>
+    <string name="nav_matching">matching</string>
+    <string name="nav_club">club</string>
+    <string name="nav_community">community</string>
+    <string name="nav_notification">Notification</string>
+    <string name="nav_my_page">my page</string>
+    <string name="nav_login">login</string>
+
+    <string name="toolbar_main_notification">notification</string>
+    <string name="toolbar_main_my_page">my page</string>
+
+    <string name="toolbar_my_page_title">내 정보</string>
+    <string name="toolbar_notification_title">알림</string>
+
+    <string name="toast_login_fail">소셜 로그인 실패</string>
+</resources>

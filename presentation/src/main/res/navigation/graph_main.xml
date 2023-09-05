@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@+id/home_fragment">
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.uos.cokcok.presentation.ui.home.HomeFragment"
+        android:label="@string/nav_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_home_to_notification"
+            app:destination="@id/notification_fragment"/>
+
+        <action
+            android:id="@+id/action_home_to_my_page"
+            app:destination="@id/my_page_fragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/matching_fragment"
+        android:name="com.uos.cokcok.presentation.ui.matching.MatchingFragment"
+        android:label="@string/nav_matching"
+        tools:layout="@layout/fragment_matching">
+
+        <action
+            android:id="@+id/action_matching_to_notification"
+            app:destination="@id/notification_fragment" />
+
+        <action
+            android:id="@+id/action_matching_to_my_page"
+            app:destination="@id/my_page_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/club_fragment"
+        android:name="com.uos.cokcok.presentation.ui.club.ClubFragment"
+        android:label="@string/nav_club"
+        tools:layout="@layout/fragment_club">
+
+        <action
+            android:id="@+id/action_club_to_notification"
+            app:destination="@id/notification_fragment"/>
+
+        <action
+            android:id="@+id/action_club_to_my_page"
+            app:destination="@id/my_page_fragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/community_fragment"
+        android:name="com.uos.cokcok.presentation.ui.community.CommunityFragment"
+        android:label="@string/nav_community"
+        tools:layout="@layout/fragment_community">
+
+        <action
+            android:id="@+id/action_community_to_notification"
+            app:destination="@id/notification_fragment"/>
+
+        <action
+            android:id="@+id/action_community_to_my_page"
+            app:destination="@id/my_page_fragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/notification_fragment"
+        android:name="com.uos.cokcok.presentation.ui.notification.NotificationFragment"
+        android:label="@string/nav_notification"/>
+
+    <fragment
+        android:id="@+id/my_page_fragment"
+        android:name="com.uos.cokcok.presentation.ui.mypage.MyPageFragment"
+        android:label="@string/nav_my_page">
+
+        <action
+            android:id="@+id/action_my_page_to_login"
+            app:destination="@id/login_fragment"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="com.uos.cokcok.presentation.ui.login.LoginFragment"
+        android:label="@string/nav_login"/>
+
+</navigation>

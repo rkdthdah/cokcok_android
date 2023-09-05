@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/notification"
+        android:title="@string/toolbar_main_notification"
+        android:contentDescription="@string/toolbar_main_notification"
+        android:icon="@drawable/ic_app_logo_24dp"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/my_page"
+        android:title="@string/toolbar_main_my_page"
+        android:contentDescription="@string/toolbar_main_my_page"
+        android:icon="@drawable/ic_app_logo_24dp"
+        app:showAsAction="ifRoom" />
+
+</menu>
